@@ -9,7 +9,7 @@ docker build -t my-project .
 ```
 Este comando irá criar uma imagem do seu projeto com o Tag my-project
 
-### 2 - Criar um container devivado da imagem
+### 2 - Criar um container derivado da imagem
 
 ``` powershell
 docker run -d -p 3000:3000 -n project-docker my-project
