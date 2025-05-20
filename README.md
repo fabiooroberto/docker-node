@@ -15,36 +15,63 @@ sudo systemctl enable --now docker ocker.socker containerd
 docker --help
 ```
 -- Iniciar o ambiente em modo admin do usuário
+```powershell
 sudo su
+```
 
 -- Baixar ultima imagem do wordpress do dockerhub
+```powershell
 docker pull wordpress
+```
 
 -- Listar todas as images baixadas no sistema
+```powershell
 docker images
+```
 
 -- Container é uma imagem em execução
 
 -- Name (Nome do container que será criado) wordpress (indica qual imagem está sendo usada para criar o container)
+```powershell
 docker run --name meu_wordpress -p 8080:80 -d wordpress
+```
 
 -- Imagem do ubuntu
+```powershell
 docker pull ubuntu
+```
 
 -- -it (interativo com o terminal)
+```powershell
 docker run -it ubuntu
+```
 
+```powershell
 docker stop 81c4 (inicias do Id do container)
+```
+
+```powershell
 docker start 81c4
-docker restart 81c4
+```
+```powershell
+docker restart 81c44
+```
+```powershell
 docker rm 81c4
+```
 -- remover uma imagem
+```powershell
 docker rmi ubuntu
+```
 
 -- c# (Criar imagem baseada no dockerfile)
+```powershell
 docker build -t docker-aspnet-yb -f DockerAspNet.API/Dockerfile .
+```
 -- criar container baseado na imagem
+```powershell
 docker run -d -p 5000:80 docker-demo-yb docker-aspnet-yb
+```
 
 
 # Iniciar o projeto
