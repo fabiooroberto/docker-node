@@ -1,3 +1,52 @@
+# Docker no linux
+
+## Instalação 
+```powershell
+sudo apt install docker.io docker-compose
+```
+
+## Iniciar junto com o sistema
+```powershell
+sudo systemctl enable --now docker ocker.socker containerd
+```
+
+## Helper
+```powershell
+docker --help
+```
+-- Iniciar o ambiente em modo admin do usuário
+sudo su
+
+-- Baixar ultima imagem do wordpress do dockerhub
+docker pull wordpress
+
+-- Listar todas as images baixadas no sistema
+docker images
+
+-- Container é uma imagem em execução
+
+-- Name (Nome do container que será criado) wordpress (indica qual imagem está sendo usada para criar o container)
+docker run --name meu_wordpress -p 8080:80 -d wordpress
+
+-- Imagem do ubuntu
+docker pull ubuntu
+
+-- -it (interativo com o terminal)
+docker run -it ubuntu
+
+docker stop 81c4 (inicias do Id do container)
+docker start 81c4
+docker restart 81c4
+docker rm 81c4
+-- remover uma imagem
+docker rmi ubuntu
+
+-- c# (Criar imagem baseada no dockerfile)
+docker build -t docker-aspnet-yb -f DockerAspNet.API/Dockerfile .
+-- criar container baseado na imagem
+docker run -d -p 5000:80 docker-demo-yb docker-aspnet-yb
+
+
 # Iniciar o projeto
 
 ## Passos
